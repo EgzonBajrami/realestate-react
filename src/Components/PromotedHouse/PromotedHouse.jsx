@@ -36,7 +36,7 @@ const PromotedHouse = () =>{
  
     return <>
    
-   <div className="wrapper-heading">
+   <div className="wrapper-heading" onClick={()=>navigate('/houses')}>
 
 <div className="heading-container">
     <h3>Shtepia</h3>

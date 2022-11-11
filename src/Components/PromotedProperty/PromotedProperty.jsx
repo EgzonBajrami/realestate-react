@@ -34,7 +34,7 @@ const PromotedProperty = () =>{
 
  
     return <>
-<div className="wrapper-heading">
+<div className="wrapper-heading" onClick={()=>{navigate('/properties')}}>
 
 <div className="heading-container">
 <h3>PRONA</h3>
