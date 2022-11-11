@@ -1,0 +1,19 @@
+.images-container{
+    display:flex;
+    flex-direction:row;
+    align-content:center;
+    margin-left:10%;
+    height:500px;
+    width:1068px;
+
+
+  
+
+}
+
+.carousel-image{
+   
+    height:500px;
+    width:1068px;
+    object-fit: contain;
+}

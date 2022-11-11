@@ -1,0 +1,11 @@
+.btns-container{
+    display:flex;
+    flex-direction:column;
+    margin-top:15%;
+}
+.query-btns{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    margin-top:5%;
+}

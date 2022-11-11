@@ -1,0 +1,91 @@
+.container-latests{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:2%;
+    border-top:0.1rem solid black;
+
+    
+    
+    width:90%;
+    margin-left:5%;
+    color:white;
+    
+
+   
+}
+.wrapper-latest{
+    display:flex;
+    flex-direction:row;
+   justify-content: center;
+   color:white;
+ 
+    
+    width:100%;
+
+}
+.apartment-latests{
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:25%;
+  
+}
+.apartment-title{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    width:100%;
+
+    color:white;
+}
+.image-latests{
+    object-fit:contain;
+    object-position:50% 50%;
+    height:100px;
+}
+@media screen and (max-width:768px){
+    .container-latests{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-top:2%;
+        border-top:0.1rem solid black;
+        
+        width:90%;
+       
+    }
+    .wrapper-latest{
+        display:flex;
+        flex-direction:column;
+       justify-content: center;
+       align-items:center;
+     
+        
+        width:100%;
+    
+    }
+    .apartment-latests{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:90%;
+   
+        margin-top:5%;
+    }
+    .apartment-title{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        width:100%;
+        background-color:black;
+        color:white;
+    }
+    .image-latests{
+        object-fit:contain;
+        object-position:50% 50%;
+        width:100%;
+        height:150px;
+    }
+}

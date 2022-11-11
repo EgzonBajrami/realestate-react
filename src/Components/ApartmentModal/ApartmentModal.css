@@ -1,0 +1,12 @@
+.container-div{
+    display:flex;
+    flex-direction:column;
+}
+.images-containers{
+     width:250px;
+}
+.location-div{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+}

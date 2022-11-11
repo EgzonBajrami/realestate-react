@@ -1,0 +1,31 @@
+const endpoints = {
+    register:{url:'/register', method:'POST'},
+    login:{url:'/login', method:'POST'},
+    promotedApartment:{url:'/apartment/promotedApartment', method:'GET'},
+    getAllApartment:{url:'/apartment/allApart/', method:'GET'},
+    createApartment:{url:'/apartment/createApartment', method:'POST'},
+    addImage:{url:'/apartment/add-image/',method:'POST'},
+    promotedHouse:{url:'/house/promotedHouse', method:'GET'},
+    getAllHouses:{url:'/house/allHouses',method:'GET'},
+    createHouse:{url:'/house/createHouse', method:'POST'},
+    addHouseImage:{url:'/house/add-image/',method:'POST'},
+    addPropertyImage:{url:'/property/add-image/', method:'POST'},
+    getSingleApartment:{url:'/apartment/singleApartment/',method:'GET'},
+    getSingleHouse:{url:'/house/singleHouse/',method:'GET'},
+    createProperty:{url:'/property/createProperty', method:'POST'},
+    getPromotedProperty:{url:'/property/promotedProperty', method:'GET'},
+    getAllProperties:{url:'/property/allProperty', method:'GET'},
+    getSingleProperty:{url:'/property/singleProperty/',method:'GET'},
+    editApartment:{url:'/apartment/edit/', method:'POST'},
+    editHouse:{url:'/house/editHouse/', method:'POST'},
+    editProperty:{url:'/property/editProperty/', method:'POST'},
+    addCity:{url:'/addCity', method:'POST'},
+    addDistrict:{url:'/addDistrict', method:'POST'},
+    getCities:{url:'/cities',method:'GET'},
+    getDistricts:{url:'/districts', method:'GET'},
+    getLatestApartment:{url:'/apartment/latest', method:'GET'},
+    getLatestHouse:{url:'/house/latest',method:'GET'},
+    getLatestProperty:{url:'/property/latest',method:'GET'}
+
+}
+export default endpoints;

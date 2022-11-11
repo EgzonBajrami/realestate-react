@@ -1,0 +1,41 @@
+.color-navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+
+
+}
+.navImage{
+    width:100px;
+
+}
+.addBorder{
+    border-right:0.1rem solid white;
+    border-left:0.1rem solid white;
+    padding-left:0.4rem;
+    padding-right:0.4rem;
+}
+.putinline{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+
+}
+.changeDirection{
+    color:white;
+}
+.change-color{
+    color:white;
+}
+.change-background{
+    background-color:white;
+}
+.nav-link{
+    border-right:0.1rem solid white;
+    color:white;
+}
+.nav-link:active{
+    color:aqua;
+}

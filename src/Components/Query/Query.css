@@ -1,0 +1,34 @@
+.form-container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.form-firstRow{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    margin:0.2rem;
+    padding:0.2rem;
+}
+.option-rowOne{
+    width:30%;
+}
+.submit-btn{
+    display:flex;
+    flex-direction:row;
+    width:100vw;
+   
+  
+    align-items:center;
+ 
+   
+  
+}
+.kerko-btn{
+    display:flex;
+    background-color:black;
+    
+
+ 
+
+}
