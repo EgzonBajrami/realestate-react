@@ -3,6 +3,7 @@
     display:flex;
     flex-direction:row;
     align-items:center;
+    justify-content:center;
    
 }
 .apartment-containerss{
@@ -105,6 +106,9 @@
     border-right:0.2rem solid black;
     width:25%;
 }
+.contact-wrapper{
+    margin-top:2.5%;
+}
 @media screen and (max-width:768px){
     .wrapper-apartment{
         display:flex;
@@ -150,6 +154,7 @@
     .contact-wrapper{
         display:flex;
         width:95%;
+       
     }
     
 }

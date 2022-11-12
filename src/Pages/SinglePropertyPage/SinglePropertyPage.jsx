@@ -53,7 +53,7 @@ const SinglePropertyPage = () =>{
      
          <div className="apartment-containerss" key={elem._id}>
          <div className="go-to-edit"> 
-          {auth.role==="ADMIN" &&(<button onClick={()=>{navigate(`/properties/edit/${postId}`,{state:{postData:elem}})}}>Edit</button>)}
+         {(auth!==null)&&auth.role==='ADMIN'&&(<button onClick={()=>{navigate(`/apartments/edit/${postId}`,{state:{postData:elem}})}}>Edit</button>)}
 
           </div>
          <div className="title-containerss">
@@ -131,7 +131,10 @@ const SinglePropertyPage = () =>{
          <GoogleMapsCall getLatitude={elem}/>
 
      </div>
-     <Contact />
+     <div className="contact-wrapper">
+
+<Contact />
+</div>
     
      </div>
     )}

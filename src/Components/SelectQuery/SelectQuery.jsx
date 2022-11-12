@@ -113,7 +113,7 @@ value={type}
 onChange={(e)=>{setType(e.target.value)}}
 className="option-rowOne"  aria-label="Default select example">
   <option >Lloji</option>
-  <option value="Apartment">Apartment</option>
+  <option value="Apartment">Banesa</option>
   <option value="Shtepi">Shtepi</option>
   <option value="Prone">Prone</option>
 

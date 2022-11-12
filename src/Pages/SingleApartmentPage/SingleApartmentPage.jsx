@@ -12,6 +12,7 @@ import {useLocation} from 'react-router-dom'
 
 
 
+
 import Carousel from 'react-bootstrap/Carousel';
 import Contact from '../../Components/Contact/Contact';
 import GoogleMapsCall from '../../Components/GoogleMapsCall/GoogleMapsCall';
@@ -19,8 +20,10 @@ import GoogleMapsCall from '../../Components/GoogleMapsCall/GoogleMapsCall';
 const SingleApartmentPage = () =>{
 
     const location = useLocation();
+
  
     const auth = useSelector((state)=>state.auth.data)
+ 
     console.log(auth);
     const postId = location.pathname.split('/')[2]
     console.log(postId);
@@ -55,7 +58,7 @@ const SingleApartmentPage = () =>{
      
          <div className="apartment-containerss" key={elem._id}>
           <div className="go-to-edit"> 
-          {auth.role==="ADMIN" &&(<button onClick={()=>{navigate(`/apartments/edit/${postId}`,{state:{postData:elem}})}}>Edit</button>)}
+          {(auth!==null)&&auth.role==='ADMIN'&&(<button onClick={()=>{navigate(`/apartments/edit/${postId}`,{state:{postData:elem}})}}>Edit</button>)}
 
           </div>
          <div className="title-containerss">

@@ -52,7 +52,7 @@ const SingleHousePage = () =>{
      
          <div className="apartment-containerss" key={elem._id}>
          <div className="go-to-edit"> 
-          {auth.role==="ADMIN" &&(<button onClick={()=>{navigate(`/houses/edit/${postId}`,{state:{postData:elem}})}}>Edit</button>)}
+         {(auth!==null)&&auth.role==='ADMIN'&&(<button onClick={()=>{navigate(`/apartments/edit/${postId}`,{state:{postData:elem}})}}>Edit</button>)}
 
           </div>
          <div className="title-containerss">
@@ -130,7 +130,10 @@ const SingleHousePage = () =>{
          <GoogleMapsCall getLatitude={elem}/>
 
      </div>
+     <div className="contact-wrapper">
+
      <Contact />
+     </div>
     
      </div>
     )}
