@@ -51,11 +51,11 @@ const HousePage = () =>{
     let changedData4 =[];
     let changedData5=[];
     for(let i=0; i<data.length; i++){
-      if(!navigateData[0]){
+      if(!navigateData[0][0] || navigateData[0]===null){
         changedData.push(data[i]);
       }
 
-      if(data[i].city.includes(navigateData[0])){
+      if(data[i].city.includes(navigateData[0][0])){
         console.log(data[i]);
         changedData.push(data[i]);
       }
@@ -63,42 +63,38 @@ const HousePage = () =>{
     }
     for(let i=0; i<changedData.length; i++){
       console.log(changedData[i].rooms)
-      if(!navigateData[4]){
+      if(!navigateData[0][4]){
         changedData2.push(changedData[i]);
       }
-      if(changedData[i].rooms>=parseInt(navigateData[4])){
+      if(changedData[i].rooms>=parseInt(navigateData[0][4])){
         changedData2.push(changedData[i]);
       }
     }
     for(let i=0; i<changedData2.length; i++){
-      if(!navigateData[5]){
+      if(!navigateData[0][5]){
         changedData3.push(changedData2[i]);
       }
-      if(changedData2[i].rooms>=parseInt(navigateData[5])){
+      if(changedData2[i].rooms>=parseInt(navigateData[0][5])){
         changedData3.push(changedData2[i]);
       }
 
     }
     for(let i=0; i<changedData3.length;i++){
-      if(!navigateData[1]){
+      if(!navigateData[0][1]){
         changedData4.push(changedData3[i]);
       }
-      if(changedData3[i].district.includes(navigateData[1])){
+      if(changedData3[i].district.includes(navigateData[0][1])){
         changedData4.push(changedData3[i]);
       }
     }
     for(let i=0; i<changedData4.length; i++){
-      if(!navigateData[2]){
+      if(!navigateData[0][2]){
         changedData5.push(changedData4[i]);
       }
-      if(changedData4[i].status.includes(navigateData[2])){
+      if(changedData4[i].status.includes(navigateData[0][2])){
         changedData5.push(changedData4[i]);
       }
     }
-
-    console.log(changedData);
-    console.log(changedData2);
-    console.log(changedData3);
     const [itemOffset, setItemOffset] = useState(0);
     const endOffset = itemOffset + 4;
     const currentItems = changedData5.slice(itemOffset, endOffset);
@@ -138,7 +134,7 @@ const HousePage = () =>{
 <div className="wrapper-heading">
 
 <div className="heading-container">
-    <h3>Shtepia</h3>
+    <h3>Shtepi</h3>
 
   </div>
 </div>

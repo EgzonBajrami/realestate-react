@@ -56,7 +56,7 @@ const HomePage = () =>{
 
         <img
         
-          src="https://imgur.com/Y8ReP7g.jpg"
+          src="https://imgur.com/M9AUfPQ.jpg"
           alt="Third slide"
         />
         </div>
@@ -77,7 +77,7 @@ const HomePage = () =>{
         </div>
 
         <Carousel.Caption className="carousel-capt">
-          <h3>Prone ne shitje</h3>
+          <h3>Toka ne shitje</h3>
           
         </Carousel.Caption>
       </Carousel.Item>
