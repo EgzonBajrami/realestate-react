@@ -77,7 +77,7 @@ const HomePage = () =>{
         </div>
 
         <Carousel.Caption className="carousel-capt">
-          <h3>Toka ne shitje</h3>
+          <h3>Troje ne shitje</h3>
           
         </Carousel.Caption>
       </Carousel.Item>
