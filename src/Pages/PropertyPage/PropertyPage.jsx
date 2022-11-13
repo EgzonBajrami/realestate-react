@@ -202,7 +202,7 @@ const PropertyPage = () =>{
        
            
             <div className="about-apartmentss" onClick={()=>{navigate(`/properties/${elem._id}`)}}>
-                 <p>{elem.description.substring(0,50)}</p>
+            <p>{elem.description.substring(0,100)}</p>
 
              </div>
 

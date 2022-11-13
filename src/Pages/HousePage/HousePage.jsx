@@ -208,7 +208,7 @@ const HousePage = () =>{
        
            
             <div className="about-apartmentss">
-            <p>{elem.description.substring(0,50)}</p>
+            <p>{elem.description.substring(0,100)}</p>
 
              </div>
 
