@@ -95,31 +95,48 @@ const Apartment = () =>{
    
  </div>
 
-     <div className="data-containers" onClick={()=>{navigate(`/apartments/${elem._id}`)}} >
-         <div className="price-containers">
-             <p>Qyteti: {elem.city},Lagjja: {elem.district}</p>
+      
+ <div className="data-containerss" onClick={()=>{navigate(`/apartments/${elem._id}`)}}  >
+          <div className="status-container">
+            <div className="status-cont">
+              <button className="btn-status">{elem.status}</button>
+              <div className="price-containerss">
+                 <p>{elem.city},</p>
+                 <p className="lagjja">{elem.district}</p>
+       
 
-         </div>
-         <div className="about-apartments">
-             <p>{elem.description}</p>
+             </div>
+        
+     
 
-         </div>
-         <div className="apartment-divss">
-             <div className="divs-apartments">
-                 <FontAwesomeIcon size="lg" icon={faBed} /> 
-                 {elem.rooms}</div>
-             <div className="divs-apartments">
-                 <FontAwesomeIcon size="lg" icon={faBath} />
-                 {elem.toilet}</div>
-             <div className="divs-apartments">{elem.status}</div>
-             <div className="divs-apartments">
-                 <FontAwesomeIcon size="lg" icon={faSackDollar} />
-                 {elem.price}</div>
+            </div>
+         
+            <div className="about-apartmentss">
+            <p>{elem.description.substring(0,50)}</p>
 
-         </div>
+             </div>
+
+          </div>
+         
+             <div className="apartment-divsss">
+                 <div className="divs-apartmentss">
+                     <FontAwesomeIcon size="lg" icon={faBed} /> 
+                     <h6>Dhoma gjumi: {elem.rooms} </h6></div>
+                 <div className="divs-apartmentss">
+                    <div className="icons-container"> 
+                       <FontAwesomeIcon size="lg" icon={faBath} />
+                      </div>
+                     <h6>Banjo:{elem.toilet} </h6></div>
+                     <div className="divs-apartmentss">
+                     <FontAwesomeIcon size="lg" icon={faSackDollar} />
+                    <h6>Cmimi: {elem.price} </h6></div>
+
+              
+
+             </div>
+
 
      </div>
-
  </div>
  
 ))}

@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSackDollar } from '@fortawesome/free-solid-svg-icons'
 import {useNavigate} from 'react-router-dom'
 import './PromotedProperty.css'
+import { faUpDownLeftRight } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -91,22 +92,36 @@ const PromotedProperty = () =>{
     </Carousel>
        
      </div>
-
-         <div className="data-containers" onClick={()=>{navigate(`/properties/${elem._id}`)}} >
-             <div className="price-containers">
-                 <p>Qyteti: {elem.city},Lagjja: {elem.district}</p>
+     <div className="data-containerss" onClick={()=>{navigate(`/properties/${elem._id}`)}}  >
+         <div className="status-container">
+            <div className="status-cont">
+              <button className="btn-status">{elem.status}</button>
+              <div className="price-containerss">
+                 <p>{elem.city},</p>
+                 <p className="lagjja">{elem.district}</p>
 
              </div>
-             <div className="about-apartments">
-                 <p>{elem.description}</p>
+     
+
+            </div>
+       
+           
+            <div className="about-apartmentss" onClick={()=>{navigate(`/properties/${elem._id}`)}}>
+                 <p>{elem.description.substring(0,50)}</p>
 
              </div>
-             <div className="apartment-divss">
-                
-                 <div className="divs-apartments">{elem.status}</div>
-                 <div className="divs-apartments">
+
+          </div>
+             <div className="apartment-divsss">
+              
+                 <div className="divs-apartmentss">
+                     <FontAwesomeIcon size="lg" icon={faUpDownLeftRight} />
+                     <h6>Ari: {elem.yard}</h6></div>
+
+                 <div className="divs-apartmentss">
                      <FontAwesomeIcon size="lg" icon={faSackDollar} />
-                     {elem.price}</div>
+                     <h6>Cmimi: {elem.price}
+                      </h6></div>
 
              </div>
 

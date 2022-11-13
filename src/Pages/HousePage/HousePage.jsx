@@ -12,6 +12,7 @@ import LatestPosts from '../../Components/LatestPosts/LatestPosts';
 
 
 import Carousel from 'react-bootstrap/Carousel';
+import { faUpDownLeftRight } from '@fortawesome/free-solid-svg-icons';
 
 import ReactPaginate from 'react-paginate';
 import Query from '../../Components/Query/Query';
@@ -192,26 +193,46 @@ const HousePage = () =>{
        
      </div>
 
-         <div className="data-containers" onClick={()=>{navigate(`/houses/${elem._id}`)}} >
-             <div className="price-containers">
-                 <p>Qyteti: {elem.city},Lagjja: {elem.district}</p>
+     <div className="data-containerss" onClick={()=>{navigate(`/houses/${elem._id}`)}}  >
+          <div className="status-container">
+            <div className="status-cont">
+              <button className="btn-status">{elem.status}</button>
+              <div className="price-containerss">
+                 <p>{elem.city},</p>
+                 <p className="lagjja">{elem.district}</p>
 
              </div>
-             <div className="about-apartments">
-                 <p>{elem.description}</p>
+     
+
+            </div>
+       
+           
+            <div className="about-apartmentss">
+            <p>{elem.description.substring(0,50)}</p>
 
              </div>
-             <div className="apartment-divss">
-                 <div className="divs-apartments">
+
+          </div>
+         
+             <div className="apartment-divsss">
+                 <div className="divs-apartmentss">
                      <FontAwesomeIcon size="lg" icon={faBed} /> 
-                     {elem.rooms}</div>
-                 <div className="divs-apartments">
-                     <FontAwesomeIcon size="lg" icon={faBath} />
-                     {elem.bathroom}</div>
-                 <div className="divs-apartments">  Perimetri: {elem.yard}</div>
-                 <div className="divs-apartments">
+                     <h6>Dhoma gjumi: {elem.rooms} </h6></div>
+                 <div className="divs-apartmentss">
+                    <div className="icons-container"> 
+                       <FontAwesomeIcon size="lg" icon={faBath} />
+                      </div>
+                     <h6>Banjo:{elem.bathroom} </h6></div>
+                     <div className="divs-apartmentss">
+                     <div className="icons-container"> 
+                       <FontAwesomeIcon size="lg" icon={faUpDownLeftRight} />
+                      </div>
+                     <h6>Ari: {elem.bathroom} </h6></div>
+                     <div className="divs-apartmentss">
                      <FontAwesomeIcon size="lg" icon={faSackDollar} />
-                   {elem.price}</div>
+                    <h6>Cmimi: {elem.price} </h6></div>
+
+              
 
              </div>
 

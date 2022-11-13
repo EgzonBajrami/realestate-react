@@ -62,7 +62,7 @@ const SingleApartmentPage = () =>{
 
           </div>
          <div className="title-containerss">
-             <h3>{elem.title}</h3>
+             <h3>{elem.title} - {elem.status}</h3>
          </div>
        
 
@@ -110,25 +110,41 @@ const SingleApartmentPage = () =>{
      </div>
 
          <div className="data-containerss"  >
-             <div className="price-containerss">
-                 <p>Qyteti: {elem.city},Lagjja: {elem.district}</p>
+          <div className="status-container">
+            <div className="status-cont">
+              <button className="btn-status">{elem.status}</button>
+              <div className="price-containerss">
+                 <p>Qyteti: {elem.city}</p>
+                 <p className="lagjja">Lagjja:  {elem.district}</p>
+       
 
              </div>
-             <div className="about-apartmentss">
+        
+     
+
+            </div>
+         
+            <div className="about-apartmentss">
                  <p>{elem.description}</p>
 
              </div>
+
+          </div>
+         
              <div className="apartment-divsss">
                  <div className="divs-apartmentss">
                      <FontAwesomeIcon size="lg" icon={faBed} /> 
-                     {elem.rooms}</div>
+                     <h6>Dhoma gjumi: {elem.rooms} </h6></div>
                  <div className="divs-apartmentss">
-                     <FontAwesomeIcon size="lg" icon={faBath} />
-                     {elem.toilet}</div>
-                 <div className="divs-apartmentss">{elem.status}</div>
-                 <div className="divs-apartmentss">
+                    <div className="icons-container"> 
+                       <FontAwesomeIcon size="lg" icon={faBath} />
+                      </div>
+                     <h6>Banjo:{elem.toilet} </h6></div>
+                     <div className="divs-apartmentss">
                      <FontAwesomeIcon size="lg" icon={faSackDollar} />
-                     {elem.price}</div>
+                    <h6>Cmimi: {elem.price} </h6></div>
+
+              
 
              </div>
 

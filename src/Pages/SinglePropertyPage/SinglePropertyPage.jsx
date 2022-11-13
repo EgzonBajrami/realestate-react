@@ -4,9 +4,10 @@ import {api, endpoints} from '../../Lib/Api'
 import {useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBed } from '@fortawesome/free-solid-svg-icons'
-import { faBath } from '@fortawesome/free-solid-svg-icons'
+
+
 import { faSackDollar } from '@fortawesome/free-solid-svg-icons'
+import { faUpDownLeftRight } from '@fortawesome/free-solid-svg-icons';
 import './SinglePropertyPage.css'
 import {useLocation} from 'react-router-dom'
 import GoogleMapsCall from '../../Components/GoogleMapsCall/GoogleMapsCall';
@@ -105,25 +106,35 @@ const SinglePropertyPage = () =>{
      </div>
 
          <div className="data-containerss"  >
-             <div className="price-containerss">
-                 <p>Qyteti: {elem.city},Lagjja: {elem.district}</p>
+         <div className="status-container">
+            <div className="status-cont">
+              <button className="btn-status">{elem.status}</button>
+              <div className="price-containerss">
+                 <p>Qyteti: {elem.city}</p>
+                 <p className="lagjja">Lagjja:  {elem.district}</p>
 
              </div>
-             <div className="about-apartmentss">
+     
+
+            </div>
+       
+           
+            <div className="about-apartmentss">
                  <p>{elem.description}</p>
 
              </div>
+
+          </div>
              <div className="apartment-divsss">
+              
                  <div className="divs-apartmentss">
-                     <FontAwesomeIcon size="lg" icon={faBed} /> 
-                     {elem.rooms}</div>
-                 <div className="divs-apartmentss">
-                     <FontAwesomeIcon size="lg" icon={faBath} />
-                     {elem.toilet}</div>
-                 <div className="divs-apartmentss">{elem.status}</div>
+                     <FontAwesomeIcon size="lg" icon={faUpDownLeftRight} />
+                     <h6>Ari: {elem.yard}</h6></div>
+
                  <div className="divs-apartmentss">
                      <FontAwesomeIcon size="lg" icon={faSackDollar} />
-                     {elem.price}</div>
+                     <h6>Cmimi: {elem.price}
+                      </h6></div>
 
              </div>
 
