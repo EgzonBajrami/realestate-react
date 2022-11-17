@@ -38,7 +38,7 @@ const Contact = () =>{
             <p>Agjensioni per patundshmeri </p>
             <p className="to-bold">E.B Real Estate</p>
             <p>Tel: +383 049 678 698</p>
-            <p>Email: bekim.i.bajrami@gmail.com</p>
+            <p>Email: ebpatundshmeri@gmail.com</p>
         </div>
     </div>
     
