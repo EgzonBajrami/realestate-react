@@ -71,7 +71,7 @@ const SelectQuery = () =>{
               value={city}
               onChange={(e)=>{setCity(e.target.value)}}
                className="option-rowOne"  aria-label="Default select example"
-               required>
+               >
                 <option >Qyteti</option>
                 {cityData && cityData.map((elem)=>(
                   <>
@@ -84,7 +84,7 @@ const SelectQuery = () =>{
               </Form.Select>
               <Form.Select
                value={district}
-               required
+               
                onChange={(e)=>{setDistrict(e.target.value)}}
                className="option-rowOne"
                 aria-label="Default select example">
@@ -99,17 +99,19 @@ const SelectQuery = () =>{
               </Form.Select>
               <Form.Select 
               value={status}
+              required
               onChange={(e)=>{setStatus(e.target.value)}}
               className="option-rowOne" aria-label="Default select example">
                 <option className="">Statusi</option>
                 <option value="Me qera">Me qera</option>
-                <option value="Pages">Pages</option>
+                <option value="Shitet">Pages</option>
               </Form.Select>
             </div>
             <div className="form-firstRow">
 
 <Form.Select 
 value={type}
+required
 onChange={(e)=>{setType(e.target.value)}}
 className="option-rowOne"  aria-label="Default select example">
   <option >Lloji</option>
@@ -120,6 +122,7 @@ className="option-rowOne"  aria-label="Default select example">
 </Form.Select>
 <Form.Select 
 value={rooms}
+required
 onChange={(e)=>{setRooms(e.target.value)}}
 className="option-rowOne" aria-label="Default select example">
   <option value="1" className="">Min Dhoma Gjumi</option>

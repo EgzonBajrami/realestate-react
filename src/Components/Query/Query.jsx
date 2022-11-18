@@ -41,6 +41,7 @@ const Query = ({submit}) =>{
         dispatch(removeQuery())
        
         let navigateData = [city,district,status,type,rooms,bathrooms]
+
         if(navigateData[0]==='Qyteti'){
             navigateData = [null,district,status,type,rooms,bathrooms];
         }
@@ -83,7 +84,7 @@ const Query = ({submit}) =>{
               onChange={(e)=>{setCity(e.target.value)}}
                className="option-rowOne"  aria-label="Default select example"
                required>
-                <option >Qyteti</option>
+                <option value="" >Qyteti</option>
                 {cityData && cityData.map((elem)=>(
                   <>
                   
@@ -110,20 +111,23 @@ const Query = ({submit}) =>{
               </Form.Select>
               <Form.Select 
               value={status}
+              required
+              
               onChange={(e)=>{setStatus(e.target.value)}}
               className="option-rowOne" aria-label="Default select example">
-                <option className="">Statusi</option>
+                <option className="" value="">Statusi</option>
                 <option value="Me qera">Me qera</option>
-                <option value="Pages">Pages</option>
+                <option value="Shitet">Pages</option>
               </Form.Select>
             </div>
             <div className="form-firstRow">
 
 <Form.Select 
 value={type}
+required
 onChange={(e)=>{setType(e.target.value)}}
 className="option-rowOne"  aria-label="Default select example">
-  <option >Lloji</option>
+  <option value="">Lloji</option>
   <option value="Apartment">Apartment</option>
   <option value="Shtepi">Shtepi</option>
   <option value="Prone">Prone</option>
@@ -131,9 +135,10 @@ className="option-rowOne"  aria-label="Default select example">
 </Form.Select>
 <Form.Select 
 value={rooms}
+required
 onChange={(e)=>{setRooms(e.target.value)}}
 className="option-rowOne" aria-label="Default select example">
-  <option value="1" className="">Min Dhoma Gjumi</option>
+  <option value="" className="">Min Dhoma Gjumi</option>
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
@@ -141,10 +146,11 @@ className="option-rowOne" aria-label="Default select example">
 </Form.Select>
 <Form.Select
 value={bathrooms}
+required
 
 onChange={(e)=>{setBathRooms(e.target.value)}}
  className="option-rowOne" aria-label="Default select example">
-  <option  value="1" className="" selected>Min Banjo</option>
+  <option  value="" className="" selected>Min Banjo</option>
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>

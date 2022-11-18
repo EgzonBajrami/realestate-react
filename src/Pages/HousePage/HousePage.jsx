@@ -18,6 +18,8 @@ import ReactPaginate from 'react-paginate';
 import Query from '../../Components/Query/Query';
 const HousePage = () =>{
 
+ 
+
   const navigz = useSelector((state)=>state.query.data);
 
     const[navigateData,setNavigateData] = useState([navigz]);
@@ -25,12 +27,12 @@ const HousePage = () =>{
     console.log(navigateData);
    
     
-    
-    const navigate = useNavigate();
 
     
+  const navigate = useNavigate();
+
   
-   
+ 
     const [data,setApartmentData] = useState([]);
     useEffect(()=>{
         const getApartments = async ()=>{
@@ -52,50 +54,56 @@ const HousePage = () =>{
     let changedData4 =[];
     let changedData5=[];
     for(let i=0; i<data.length; i++){
-      if(!navigateData[0][0] || navigateData[0]===null){
+      if(!navigateData[0]){
         changedData.push(data[i]);
       }
 
-      if(data[i].city.includes(navigateData[0][0])){
+      if(data[i].city.includes(navigateData[0])){
         console.log(data[i]);
         changedData.push(data[i]);
       }
      
     }
     for(let i=0; i<changedData.length; i++){
-      console.log(changedData[i].rooms)
-      if(!navigateData[0][4]){
+      console.log(navigateData[5])
+      
+      if(!navigateData[5]){
         changedData2.push(changedData[i]);
       }
-      if(changedData[i].rooms>=parseInt(navigateData[0][4])){
+      if(changedData[i].rooms>=parseInt(navigateData[5])){
         changedData2.push(changedData[i]);
       }
     }
     for(let i=0; i<changedData2.length; i++){
-      if(!navigateData[0][5]){
+      if(!navigateData[6]){
         changedData3.push(changedData2[i]);
       }
-      if(changedData2[i].rooms>=parseInt(navigateData[0][5])){
+      if(changedData2[i].rooms>=parseInt(navigateData[6])){
         changedData3.push(changedData2[i]);
       }
 
     }
     for(let i=0; i<changedData3.length;i++){
-      if(!navigateData[0][1]){
+      if(!navigateData[1]){
         changedData4.push(changedData3[i]);
       }
-      if(changedData3[i].district.includes(navigateData[0][1])){
+      if(changedData3[i].district.includes(navigateData[1])){
         changedData4.push(changedData3[i]);
       }
     }
     for(let i=0; i<changedData4.length; i++){
-      if(!navigateData[0][2]){
+      if(!navigateData[2]){
         changedData5.push(changedData4[i]);
       }
-      if(changedData4[i].status.includes(navigateData[0][2])){
+      if(changedData4[i].status.includes(navigateData[2])){
         changedData5.push(changedData4[i]);
       }
     }
+    console.log(changedData);
+    console.log(changedData2);
+    console.log(changedData3);
+    console.log(changedData4);
+    console.log(changedData5);
     const [itemOffset, setItemOffset] = useState(0);
     const endOffset = itemOffset + 4;
     const currentItems = changedData5.slice(itemOffset, endOffset);
