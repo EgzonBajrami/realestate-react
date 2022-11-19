@@ -65,6 +65,11 @@ const Query = ({submit}) =>{
             dispatch(getQuery(navigateData));
             navigate('/properties', {state:{navigateData:navigateData}})
           }
+          if(navigateData[3]==='Lokale'){
+            dispatch(getQuery(navigateData));
+            navigate('/lokale', {state:{navigateData:navigateData}})
+            
+          }
         submit(navigateData);
         
        
@@ -129,6 +134,7 @@ onChange={(e)=>{setType(e.target.value)}}
 className="option-rowOne"  aria-label="Default select example">
   <option value="">Lloji</option>
   <option value="Apartment">Apartment</option>
+  <option value="Lokale">Lokale</option>
   <option value="Shtepi">Shtepi</option>
   <option value="Prone">Prone</option>
 

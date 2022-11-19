@@ -52,50 +52,53 @@ const ApartmentsPage = () =>{
     let changedData3 = [];
     let changedData4 =[];
     let changedData5=[];
-    for(let i=0; i<data.length; i++){
-      if(!navigateData[0]){
-        changedData.push(data[i]);
-      }
+    if(data){
 
-      if(data[i].city.includes(navigateData[0])){
-        console.log(data[i]);
-        changedData.push(data[i]);
+      for(let i=0; i<data.length; i++){
+        if(!navigateData[0]){
+          changedData.push(data[i]);
+        }
+  
+        if(data[i].city.includes(navigateData[0])){
+          console.log(data[i]);
+          changedData.push(data[i]);
+        }
+       
       }
-     
-    }
-    for(let i=0; i<changedData.length; i++){
-      console.log(navigateData[5])
-      
-      if(!navigateData[5]){
-        changedData2.push(changedData[i]);
+      for(let i=0; i<changedData.length; i++){
+        console.log(navigateData[5])
+        
+        if(!navigateData[5]){
+          changedData2.push(changedData[i]);
+        }
+        if(changedData[i].rooms>=parseInt(navigateData[5])){
+          changedData2.push(changedData[i]);
+        }
       }
-      if(changedData[i].rooms>=parseInt(navigateData[5])){
-        changedData2.push(changedData[i]);
+      for(let i=0; i<changedData2.length; i++){
+        if(!navigateData[6]){
+          changedData3.push(changedData2[i]);
+        }
+        if(changedData2[i].rooms>=parseInt(navigateData[6])){
+          changedData3.push(changedData2[i]);
+        }
+  
       }
-    }
-    for(let i=0; i<changedData2.length; i++){
-      if(!navigateData[6]){
-        changedData3.push(changedData2[i]);
+      for(let i=0; i<changedData3.length;i++){
+        if(!navigateData[1]){
+          changedData4.push(changedData3[i]);
+        }
+        if(changedData3[i].district.includes(navigateData[1])){
+          changedData4.push(changedData3[i]);
+        }
       }
-      if(changedData2[i].rooms>=parseInt(navigateData[6])){
-        changedData3.push(changedData2[i]);
-      }
-
-    }
-    for(let i=0; i<changedData3.length;i++){
-      if(!navigateData[1]){
-        changedData4.push(changedData3[i]);
-      }
-      if(changedData3[i].district.includes(navigateData[1])){
-        changedData4.push(changedData3[i]);
-      }
-    }
-    for(let i=0; i<changedData4.length; i++){
-      if(!navigateData[2]){
-        changedData5.push(changedData4[i]);
-      }
-      if(changedData4[i].status.includes(navigateData[2])){
-        changedData5.push(changedData4[i]);
+      for(let i=0; i<changedData4.length; i++){
+        if(!navigateData[2]){
+          changedData5.push(changedData4[i]);
+        }
+        if(changedData4[i].status.includes(navigateData[2])){
+          changedData5.push(changedData4[i]);
+        }
       }
     }
     console.log(changedData);
