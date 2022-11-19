@@ -2,7 +2,7 @@ const endpoints = {
     register:{url:'/register', method:'POST'},
     login:{url:'/login', method:'POST'},
     promotedApartment:{url:'/apartment/promotedApartment', method:'GET'},
-    getAllApartment:{url:'/apartment/allApart/', method:'GET'},
+    getAllApartment:{url:'/apartment/allApart', method:'GET'},
     createApartment:{url:'/apartment/createApartment', method:'POST'},
     addImage:{url:'/apartment/add-image/',method:'POST'},
     promotedHouse:{url:'/house/promotedHouse', method:'GET'},
@@ -25,7 +25,13 @@ const endpoints = {
     getDistricts:{url:'/districts', method:'GET'},
     getLatestApartment:{url:'/apartment/latest', method:'GET'},
     getLatestHouse:{url:'/house/latest',method:'GET'},
-    getLatestProperty:{url:'/property/latest',method:'GET'}
+    getLatestProperty:{url:'/property/latest',method:'GET'},
+    createLokal:{url:'/lokale/createLokal', method:'POST'},
+    addLokalImage:{url:'/lokale/add-image/',method:'POST'},
+    getAllLokale:{url:'/lokale/allLokale', method:'GET'},
+    getSingleLokale:{url:'/lokale/singleLokal/',method:'GET'},
+    editLokale:{url:'/lokale/edit/', method:'POST'},
+    getPromotedLokal:{url:'/lokale/promotedLokal',method:'GET'}
 
 }
 export default endpoints;

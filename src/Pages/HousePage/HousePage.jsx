@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed } from '@fortawesome/free-solid-svg-icons'
 import { faBath } from '@fortawesome/free-solid-svg-icons'
 import { faSackDollar } from '@fortawesome/free-solid-svg-icons'
-import {useSelector} from 'react-redux';
+
 import '../ApartmentsPage/ApartmentPage.css'
 import LatestPosts from '../../Components/LatestPosts/LatestPosts';
 
@@ -20,9 +20,9 @@ const HousePage = () =>{
 
  
 
-  const navigz = useSelector((state)=>state.query.data);
 
-    const[navigateData,setNavigateData] = useState([navigz]);
+
+    const[navigateData,setNavigateData] = useState([]);
 
     console.log(navigateData);
    

@@ -7,6 +7,7 @@ import {api, endpoints} from '../../Lib/Api'
 
 import Carousel from 'react-bootstrap/Carousel';
 import PromotedProperty from '../../Components/PromotedProperty/PromotedProperty'
+import PromotedLokal from '../../Components/PromotedLokal/PromotedLokal'
 
 const HomePage = () =>{
     const [apartmentData,setApartmentData] = useState([]);
@@ -100,6 +101,10 @@ const HomePage = () =>{
     <div className="promotedHouse">
 
     <PromotedProperty />
+    </div>
+    <div className="promotedHouse">
+      <PromotedLokal />
+
     </div>
     </div>
     </>

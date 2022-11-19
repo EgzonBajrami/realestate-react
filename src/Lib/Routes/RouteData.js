@@ -2,14 +2,17 @@ import ApartmentsPage from "../../Pages/ApartmentsPage/ApartmentsPage"
 import Dashboard from "../../Pages/DashboardPage/Dashboard"
 import EditApartmentPage from "../../Pages/EditApartmentPage/EditApartmentPage"
 import EditHousePage from "../../Pages/EditHousePage/EditHousePage"
+import EditLokalePage from "../../Pages/EditLokalePage/EditLokalePage"
 import EditPropertyPage from '../../Pages/EditPropertyPage/EditPropertyPage'
 import HomePage from "../../Pages/HomePage/HomePage"
 import HousePage from "../../Pages/HousePage/HousePage"
 import Login from "../../Pages/LoginPage/Login"
+import LokalePage from "../../Pages/LokalePage/LokalePage"
 import PropertyPage from "../../Pages/PropertyPage/PropertyPage"
 import Register from "../../Pages/Register/Register"
 import SingleApartmentPage from '../../Pages/SingleApartmentPage/SingleApartmentPage'
 import SingleHousePage from "../../Pages/SingleHousePage/SingleHousePage"
+import SingleLokalePage from "../../Pages/SingleLokalePage/SingleLokalePage"
 import SinglePropertyPage from "../../Pages/SinglePropertyPage/SinglePropertyPage"
 
 export const routeData = {
@@ -33,6 +36,15 @@ export const routeData = {
         {
             path:'/houses',
             element:<HousePage />
+        },
+        {
+            path:'/lokale',
+            element:<LokalePage />
+
+        },
+        {
+            path:'/lokale/:id',
+            element:<SingleLokalePage />
         },
         {
             path:'/apartments/:id',
@@ -61,6 +73,10 @@ export const routeData = {
         {
             path:'/properties/edit/:id',
             element:<EditPropertyPage />
+        },
+        {
+            path:'/lokale/edit/:id',
+            element:<EditLokalePage />
         }
     ],
     private:[

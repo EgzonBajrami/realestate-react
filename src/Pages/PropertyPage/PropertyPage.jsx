@@ -8,7 +8,7 @@ import { faSackDollar } from '@fortawesome/free-solid-svg-icons'
 import { faUpDownLeftRight } from '@fortawesome/free-solid-svg-icons';
 import '../ApartmentsPage/ApartmentPage.css'
 import LatestPosts from '../../Components/LatestPosts/LatestPosts';
-import {useSelector} from 'react-redux';
+
 
 import Carousel from 'react-bootstrap/Carousel';
 import Query from '../../Components/Query/Query';
@@ -16,9 +16,7 @@ import ReactPaginate from 'react-paginate';
 const PropertyPage = () =>{
 
 
-  const navigz = useSelector((state)=>state.query.data);
-
-    const[navigateData,setNavigateData] = useState([navigz]);
+    const[navigateData,setNavigateData] = useState([]);
 
     console.log(navigateData);
    
@@ -48,6 +46,7 @@ const PropertyPage = () =>{
     let changedData3 = [];
     let changedData4 =[];
     let changedData5=[];
+  
     for(let i=0; i<data.length; i++){
       if(!navigateData[0]){
         changedData.push(data[i]);

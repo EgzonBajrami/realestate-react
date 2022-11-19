@@ -116,6 +116,27 @@ const ChangeImage = ({postId,postType,imgs}) =>{
             
 
         }
+        if(postType==='lokal'){
+            const formData = new FormData();
+            formData.append('lokale-image', file);
+            const editConfig = {
+                headers:getHeaderStructure(auth.token),
+                params:[postId,index]
+            }
+    
+            editConfig.data = formData;
+        
+                console.log('hey')
+    
+                try{
+                    const result = await api.call(endpoints.addLokalImage,editConfig);
+                    console.log(result);
+        
+                }catch(err){
+        
+                }
+
+        }
         
      }
     return <>

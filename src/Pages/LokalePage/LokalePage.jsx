@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed } from '@fortawesome/free-solid-svg-icons'
 import { faBath } from '@fortawesome/free-solid-svg-icons'
 import { faSackDollar } from '@fortawesome/free-solid-svg-icons'
-import './ApartmentPage.css'
+import './LokalePage.css'
 
 
 import Carousel from 'react-bootstrap/Carousel';
@@ -14,7 +14,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import ReactPaginate from 'react-paginate';
 import LatestPosts from '../../Components/LatestPosts/LatestPosts';
 import Query from '../../Components/Query/Query';
-const ApartmentsPage = () =>{
+const LokalePage = () =>{
 
 
     const[navigateData,setNavigateData] = useState([]);
@@ -36,7 +36,7 @@ const ApartmentsPage = () =>{
     const [data,setApartmentData] = useState([]);
     useEffect(()=>{
         const getApartments = async ()=>{
-            const result = await api.call(endpoints.getAllApartment);
+            const result = await api.call(endpoints.getAllLokale);
             setApartmentData(result.data);
             console.log(result);
         }
@@ -143,7 +143,7 @@ const ApartmentsPage = () =>{
     <div className="wrapper-heading">
 
     <div className="heading-container">
-        <h3>Banesa</h3>
+        <h3>Lokale</h3>
 
       </div>
     </div>
@@ -203,7 +203,7 @@ const ApartmentsPage = () =>{
      </div>
 
         
-     <div className="data-containerss" onClick={()=>{navigate(`/apartments/${elem._id}`)}}  >
+     <div className="data-containerss" onClick={()=>{navigate(`/lokale/${elem._id}`)}}  >
           <div className="status-container">
             <div className="status-cont">
               <button className="btn-status">{elem.status}</button>
@@ -228,7 +228,7 @@ const ApartmentsPage = () =>{
              <div className="apartment-divsss">
                  <div className="divs-apartmentss">
                      <FontAwesomeIcon size="lg" icon={faBed} /> 
-                     <h6>Dhoma gjumi: {elem.rooms} </h6></div>
+                     <h6>Dhoma pune: {elem.rooms} </h6></div>
                  <div className="divs-apartmentss">
                     <div className="icons-container"> 
                        <FontAwesomeIcon size="lg" icon={faBath} />
@@ -256,4 +256,4 @@ const ApartmentsPage = () =>{
     </>
 }
 
-export default ApartmentsPage;
+export default LokalePage;

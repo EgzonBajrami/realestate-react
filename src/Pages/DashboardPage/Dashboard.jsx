@@ -8,11 +8,13 @@ import './Dashboard.css'
 import {api, endpoints} from '../../Lib/Api'
 import { getHeaderStructure } from '../../Lib/helper'
 import {useSelector} from 'react-redux'
+import LokaleModal from '../../Components/LokaleModal/LokaleModal';
 
 const Dashboard = () =>{
     const [open, setOpen] = useState(false);
     const [houseOpen, setHouseOpen] = useState(false);
     const [propertyOpen,setPropertyOpen] = useState(false);
+    const [lokaleOpen,setLokaleOpen] = useState(false);
     const [cityInput, setCityInput] = useState(false);
     const [districtInput, setDistrictInput] = useState(false);
     const [district, setDistrict] = useState('');
@@ -97,6 +99,13 @@ const Dashboard = () =>{
     </Button>
     <PropertyModal show={propertyOpen}
     onHide={()=>setPropertyOpen(false)} />
+    <Button variant="primary" onClick={()=>setLokaleOpen(!lokaleOpen)}>
+        Add a new lokal.
+    </Button>
+    <LokaleModal show={lokaleOpen}
+    onHide={()=>setLokaleOpen(false)}
+    />
+    
 
 
 
