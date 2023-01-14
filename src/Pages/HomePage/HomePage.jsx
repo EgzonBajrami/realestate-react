@@ -36,7 +36,12 @@ const HomePage = () =>{
 
     
     
-    <Carousel className="carousel-containe">
+    <Carousel
+      autoPlay={true}
+      interval={5000}
+
+      indicators={false}
+     className="carousel-containe">
       <Carousel.Item>
         <div   className="carousel-conta">
 

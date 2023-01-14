@@ -9,8 +9,8 @@
     
     width:90%;
     margin-left:5%;
-    color:white;
-    
+    background-color:rgb(245,245,245) !important;
+   
 
    
 }
@@ -18,18 +18,18 @@
     display:flex;
     flex-direction:row;
    justify-content: center;
-   color:white;
+
  
     
     width:100%;
 
 }
 .apartment-latests{
-    color:white;
+
     display:flex;
     flex-direction:column;
     align-items:center;
-    width:25%;
+    width:30%;
   
 }
 .apartment-title{
@@ -37,8 +37,11 @@
     flex-direction:row;
     justify-content: center;
     width:100%;
+    padding:0.5rem;
+    font-size:22px;
+    font-weight:bold;
+    text-transform:uppercase;
 
-    color:white;
 }
 .image-latests{
     object-fit:contain;
