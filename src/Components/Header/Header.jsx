@@ -17,6 +17,7 @@ function Header() {
             <Nav.Link href="/houses">Shtepi</Nav.Link>
             <Nav.Link href="/properties">Troje</Nav.Link>
             <Nav.Link href="/lokale">Lokale</Nav.Link>
+            <Nav.Link href="/rrethnesh">Rreth Nesh</Nav.Link>
          
           </Nav>
         </Navbar.Collapse>

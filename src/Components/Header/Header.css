@@ -4,6 +4,7 @@
     left:0;
     width:100%;
     z-index:9999;
+    padding:1.5rem;
 
 
 }
@@ -12,8 +13,7 @@
 
 }
 .addBorder{
-    border-right:0.1rem solid white;
-    border-left:0.1rem solid white;
+
     padding-left:0.4rem;
     padding-right:0.4rem;
 }
@@ -33,7 +33,7 @@
     background-color:white;
 }
 .nav-link{
-    border-right:0.1rem solid white;
+
     color:white;
 }
 .nav-link:active{

@@ -1,3 +1,4 @@
+import AboutUs from "../../Pages/AboutUs/AboutUs"
 import ApartmentsPage from "../../Pages/ApartmentsPage/ApartmentsPage"
 import Dashboard from "../../Pages/DashboardPage/Dashboard"
 import EditApartmentPage from "../../Pages/EditApartmentPage/EditApartmentPage"
@@ -77,6 +78,10 @@ export const routeData = {
         {
             path:'/lokale/edit/:id',
             element:<EditLokalePage />
+        },
+        {
+            path:'/rrethnesh',
+            element:<AboutUs />
         }
     ],
     private:[
